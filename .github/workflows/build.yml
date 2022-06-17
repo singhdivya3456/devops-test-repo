@@ -164,4 +164,4 @@ jobs:
           timeout: '3600'
           
       - name: Run deployment scripts
-        run: echo Completed Deployment.
+        run: echo Completed Deployment
