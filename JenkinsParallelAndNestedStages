@@ -62,7 +62,7 @@ pipeline {
 												        echo'CR1'
 													sleep 10
 												        
-  snDevOpsChange(changeRequestDetails: ""
+snDevOpsChange(changeRequestDetails: ""
   {
     "setCloseCode": false,
          "attributes": {
