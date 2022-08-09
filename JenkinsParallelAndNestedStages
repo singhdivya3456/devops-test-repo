@@ -54,7 +54,7 @@ pipeline {
 						stage("nested_inside_parallel") {
 							steps {
 								echo 'nested_inside_parallel'
-								sh 'mvn test -Dtest="unittests.*" -Dpublish'
+								//sh 'mvn test -Dtest="unittests.*" -Dpublish'
 								sleep 5
 								//junit "**/target/surefire-reports/*.xml"
 								//sleep 15
