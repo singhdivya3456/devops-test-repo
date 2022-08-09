@@ -56,8 +56,8 @@ pipeline {
 								echo 'nested_inside_parallel'
 								sh 'mvn test -Dtest="unittests.*" -Dpublish'
 								sleep 5
-								junit "**/target/surefire-reports/*.xml"
-								sleep 15
+								//junit "**/target/surefire-reports/*.xml"
+								//sleep 15
 							}
 							post {
 								success {
