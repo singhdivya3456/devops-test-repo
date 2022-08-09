@@ -59,12 +59,12 @@ pipeline {
 								//junit "**/target/surefire-reports/*.xml"
 								//sleep 15
 							}
-							post {
-								success {
-									echo 'Test1-success'
-									junit "**/target/surefire-reports/*.xml"
-								}
-							}
+							//post {
+							//	success {
+							//		echo 'Test1-success'
+							//		junit "**/target/surefire-reports/*.xml"
+							//	}
+							//}
 						}
 						stage("Deploy1") {
 							steps {
