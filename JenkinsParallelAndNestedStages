@@ -95,7 +95,7 @@ snDevOpsChange(changeRequestDetails: """
 					stages {
 						stage("nested_inside_parallel2") {
 							steps {
-								//sleep 20
+								sleep 20
 								//sh 'mvn test -Dtest="ppmtests.*" -Dpublish'
 								echo 'Test2 in progress'
 								//sleep 5
