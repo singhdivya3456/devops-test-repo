@@ -59,12 +59,12 @@ pipeline {
 								//junit "**/target/surefire-reports/*.xml"
 								//sleep 15
 							}
-							//post {
-							//	success {
-							//		echo 'Test1-success'
+							post {
+								success {
+									echo 'Test1-success'
 							//		junit "**/target/surefire-reports/*.xml"
-							//	}
-							//}
+								}
+							}
 						}
 						stage("Deploy1") {
 							steps {
@@ -96,18 +96,18 @@ snDevOpsChange(changeRequestDetails: """
 						stage("nested_inside_parallel2") {
 							steps {
 								sleep 20
-								sh 'mvn test -Dtest="ppmtests.*" -Dpublish'
+								//sh 'mvn test -Dtest="ppmtests.*" -Dpublish'
 								echo 'Test2 in progress'
-								sleep 5
-								junit "**/target/surefire-reports/*.xml"
-								sleep 15
+								//sleep 5
+								//junit "**/target/surefire-reports/*.xml"
+								//sleep 15
 								snDevOpsChange()
 								//sonarSummaries()
 							}
 							post {
 								success {
 									echo 'Test2-success'
-									junit "**/target/surefire-reports/*ppmtests.*.xml"
+							//		junit "**/target/surefire-reports/*ppmtests.*.xml"
 								}
 							}
 						}
